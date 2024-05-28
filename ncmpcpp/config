@@ -1,0 +1,24 @@
+# MPD-settings
+mpd_host =                              "localhost"
+mpd_port =                              "6600"
+mpd_music_dir =                         "~/Music/"
+
+# Player
+autocenter_mode =                       "yes"
+centered_cursor =                       "yes"
+header_visibility =                     "no"
+statusbar_visibility =                  "yes"
+titles_visibility =                     "yes"
+playlist_disable_highlight_delay =      "0"
+state_line_color =                      "magenta"
+
+# Progressbar
+progressbar_color =                     "black"
+progressbar_elapsed_color =             "red"
+progressbar_look =                      "━━"
+
+# Visualizer
+visualizer_type =                       "spectrum"
+visualizer_color =                      "green, cyan, magenta, white"
+visualizer_in_stereo =                  "yes"
+visualizer_output_name =                "My Pulse Output"
