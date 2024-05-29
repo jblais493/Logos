@@ -187,7 +187,7 @@ alias src="source ~/.zshrc"
 alias ezsh="nvim ~/.zshrc"
 
 # Navigation
-alias oo="cd ~/Vaults"
+alias oo="cd ~/Vaults && nvim"
 alias godir="cd ~/go/src"
 alias gop="cd ~/go/src/github.com/jblais493/EchoBoilerplate"
 alias dev="cd ~/Development"
