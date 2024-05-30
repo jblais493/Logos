@@ -165,33 +165,26 @@ frm() {
 # path for GO
 export PATH="$PATH:$HOME/go/bin"
 
-# Tasks and Calendar
-alias ta="task add" 
-alias tl="task list"
-alias te="task export > tasks.json"
-alias cal="calcure"
-alias tasks="cd ~/Tasks"
-
 # Programs
 alias nb="newsboat"
 alias lg="lazygit"
 alias py="python"
+alias td="termdown"
 
-# Alias 2024
+# Aliases 2024
 alias dnf="sudo dnf"
-alias kat="tmux kill-server"
+alias p="sudo pacman"
 alias r='lf'
 alias ytd='yt-dlp'
-alias ytmp3="yt-dlp -f 'ba'"
 alias src="source ~/.zshrc"
 alias ezsh="nvim ~/.zshrc"
 
 # Navigation
-alias oo="cd ~/Vaults && nvim"
+alias oo="cd ~/Vaults"
+alias bills="nvim ~/Vaults/Personal/bills.md"
 alias godir="cd ~/go/src"
 alias gop="cd ~/go/src/github.com/jblais493/EchoBoilerplate"
 alias dev="cd ~/Development"
-alias comp="cd ~/Shared/Documents/Computers"
 alias writing="cd /mnt/Logos/TrueNAS/org/roam/Writing"
 alias photos="cd /mnt/Logos/TrueNAS/Photos"
 alias f="thunar . &"
@@ -203,7 +196,7 @@ alias buyers="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmo
 alias revsys="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Systems"
 alias nas="cd /mnt/Logos/TrueNAS"
 alias media="cd /mnt/Logos/TrueNAS/media"
-alias music="cd /mnt/Logos/TrueNAS/media/Music"
+alias music="cd ~/Music"
 alias movies="cd /mnt/Logos/TrueNAS/media/Movies"
 alias mountain="cd /mnt/Logos/TrueNAS/Writing/Books/Mountain"
 alias blog="cd ~/Development/JoshBlog2022"
@@ -216,11 +209,11 @@ alias pg="pass generate"
 alias v="nvim"
 alias sd="spotdl"
 alias syncvault="rsync -avz --delete /mnt/TrueNAS/ /mnt/Vault/TrueNAS"
-alias syncnas="rsync -avz --delete /mnt/TrueNAS/ /mnt/External4TB/TrueNAS"
+alias syncnas="rsync -avz --delete /mnt/Logos/TrueNAS/ /mnt/External4TB/TrueNAS"
 alias mntnas="sshfs joshua@172.18.250.13:/mnt/Vault /mnt/Logos"
 alias umountnas="fusermount -u /mnt/Logos"
 alias mntexternal="sudo mount /dev/sdb1 /mnt/External4TB"
-alias mntvault="sudo mount /dev/sda /mnt/Vault"
+alias mntvault="sudo mount /dev/sda /mnt/Logos"
 alias doomsync="~/.emacs.d/bin/doom sync"
 alias doomrefresh="~/.emacs.d/bin/doom refresh"
 alias reverecalc="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Systems/Programs/Calculators && python ConveyancingOutput.py"
@@ -257,6 +250,7 @@ alias payoutSeth="gimp /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Brokerage/Albert
 alias cinst="gimp /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Systems/Conveyancing/Templates/Conveyancing\ Instructions\ Template.xcf"
 
 # Tmux commands
+alias kat="tmux kill-server"
 alias t="TERM=screen-256color-bce tmux"
 alias tat="tmux attach -t"
 alias tsf="tmux source-file ~/.tmux.conf"
