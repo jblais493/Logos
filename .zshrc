@@ -20,6 +20,7 @@ export PATH=$PATH:~/.config/scripts/Dotfiles
 # Path to your oh-my-zsh installation.
 export ZSH="/home/joshua/.oh-my-zsh"
 export EDITOR="nvim"
+export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -190,9 +191,9 @@ alias photos="cd /mnt/Logos/TrueNAS/Photos"
 alias f="thunar . &"
 alias revere="cd /mnt/Logos/TrueNAS/Revere"
 alias revereb="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Brokerage"
-alias commer="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2023/Commercial"
-alias sellers="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2022/Sellers"
-alias buyers="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2022/Buyers"
+alias commer="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2024Commercial"
+alias sellers="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2024/Sellers"
+alias buyers="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2024/Buyers"
 alias revsys="cd /mnt/Logos/TrueNAS/Revere/Revere\ LATEST/Systems"
 alias nas="cd /mnt/Logos/TrueNAS"
 alias media="cd /mnt/Logos/TrueNAS/media"
@@ -398,3 +399,4 @@ fi=📄:\
 "
 
 eval "$(starship init zsh)"
+eval "$(tmuxifier init -)"
