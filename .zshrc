@@ -102,6 +102,8 @@ plugins=(
   transfer
 )
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
+
 source $ZSH/oh-my-zsh.sh
 
 # Quick cd using fzf
@@ -174,6 +176,7 @@ alias td="termdown"
 
 # Aliases 2024
 alias dnf="sudo dnf"
+# alias dnfupdate ="sudo dnf update && flatpak update"
 alias p="sudo pacman"
 alias r='lf'
 alias ytd='yt-dlp'
