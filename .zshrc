@@ -116,6 +116,7 @@ export PATH="$PATH:$HOME/go/bin"
 alias cat="bat"
 alias cl="clear"
 alias ls="eza -l --icons"
+alias la="eza -TL 2 --icons"
 alias nb="newsboat"
 alias lg="lazygit"
 alias ld="lazydocker"
@@ -351,3 +352,4 @@ fi=📄:\
 
 eval "$(starship init zsh)"
 eval "$(tmuxifier init -)"
+eval "$(zoxide init zsh)"
