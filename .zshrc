@@ -152,7 +152,7 @@ alias media="cd /mnt/Logos/TrueNAS/media"
 alias music="cd ~/Music"
 alias movies="cd /mnt/Logos/TrueNAS/media/Movies"
 alias mountain="cd /mnt/Logos/TrueNAS/Writing/Books/Mountain"
-alias blog="cd ~/Development/JoshBlog2022"
+alias blog="tmuxp load Development/JoshBlog2022/blogsession.yaml"
 alias library="cd /mnt/Logos/TrueNAS/Library"
 
 # Scripts
