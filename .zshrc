@@ -9,6 +9,7 @@ if [ -f ${HOME}/.zplug/init.zsh ]; then
 fi
 
 export PATH=$PATH:~/.local/bin/
+export GOPATH=$HOME/go
 
 #scripts
 export PATH=$PATH:~/.config/scripts
@@ -156,7 +157,7 @@ alias blog="tmuxp load ~/Development/Blog2024/blogsession.yaml"
 alias library="cd /mnt/Logos/TrueNAS/Library"
 
 # Scripts
-alias rs="gammastep -O 4000 0.9 &"
+alias rs="gammastep -O 1965K &"
 alias rsx="killall gammastep"
 alias pg="pass generate"
 alias v="nvim"
