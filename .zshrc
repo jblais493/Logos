@@ -127,7 +127,6 @@ alias td="termdown"
 alias dnf="sudo dnf"
 # alias dnfupdate ="sudo dnf update && flatpak update"
 alias p="sudo pacman"
-alias r='lf'
 alias ytd='yt-dlp'
 alias src="source ~/.zshrc"
 alias ezsh="nvim ~/.zshrc"
@@ -216,7 +215,6 @@ alias qutebrowser="cd ~/.config/qutebrowser"
 alias shell="cd ~/.config/shell"
 alias scripts="cd ~/.config/scripts"
 alias books="cd ~/.config/scripts/bookmarks"
-alias elf="sudo nvim /usr/local/bin/lf-ueberzug/lf-ueberzug"
 
 bindkey -v
 bindkey -M viins 'kj' vi-cmd-mode
@@ -250,107 +248,8 @@ HISTFILE=~/.zsh_history
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-  # `command` is needed in case `lfcd` is aliased to `lf`
-  cd "$(command lf -print-last-dir "$@")"
-}
-bindkey -s '^o' 'lfcd\n'
 
-# Icons for lf
-export LF_ICONS="\
-ln=🔗:\
-or=💔:\
-tw=📁:\
-ow=📁:\
-st=📁:\
-di=📁:\
-pi=⏩:\
-so=🔌:\
-bd=🔌:\
-cd=📌:\
-su=📜:\
-sg=📜:\
-ex=📜:\
-fi=📄:\
-*.txt=📝:\
-*.log=📄:\
-*.avi=📺:\
-*.mkv=📺:\
-*.mp4=📺:\
-*.mov=📺:\
-*.srt=💬:\
-*.mp3=🎶:\
-*.aac=🎶:\
-*.m4a=🎶:\
-*.flac=🎶:\
-*.ogg=🎶:\
-*.wav=🎵:\
-*.png=🌄:\
-*.jpg=🌄:\
-*.bmp=🌄:\
-*.gif=🌄:\
-*.tga=🌄:\
-*.jpeg=🌄:\
-*.svg=🌄:\
-*.ico=🌄:\
-*.webp=🌄:\
-*.pdf=📘:\
-*.md=📘:\
-*.c=📜:\
-*.cpp=📜:\
-*.h=📜:\
-*.sh=📜:\
-*.js=📜:\
-*.py=📜:\
-*.cs=📜:\
-*.css=📜:\
-*.php=📜:\
-*.json=📜:\
-*.xml=📜:\
-*.yml=📜:\
-*.yaml=📜:\
-*.install=📜:\
-*.scm=🔧:\
-*.pid=🔧:\
-*.conf=🔧:\
-*.cfg=🔧:\
-*.cnf=🔧:\
-*.ini=🔧:\
-*.exe=🍷:\
-*.so=📚:\
-*.dll=📚:\
-*.gz=📦:\
-*.zip=📦:\
-*.rar=📦:\
-*.7z=📦:\
-*.bz2=📦:\
-*.xz=📦:\
-*.zst=📦:\
-*.deb=📦:\
-*.apk=📦:\
-*.iso=💿:\
-*.img=💿:\
-*.htm=🌍:\
-*.html=🌍:\
-*.torrent=🌐:\
-*.pub=🔒:\
-*.key=🔑:\
-*.crt=🔑:\
-*.pem=🔑:\
-*.gpg=🔑:\
-*.vbox=💻:\
-*.vdi=💽:\
-*.ova=📦:\
-*.xls=📊:\
-*.xlsx=📊:\
-*.doc=📋:\
-*.docx=📋:\
-*.ppt=🌠:\
-*.pptx=🌠:\
-"
-
-function yz() {
+function r() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
