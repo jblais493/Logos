@@ -9,7 +9,6 @@ if [ -f ${HOME}/.zplug/init.zsh ]; then
 fi
 
 export PATH=$PATH:~/.local/bin/
-export GOPATH=$HOME/go
 
 #scripts
 export PATH=$PATH:~/.config/scripts
@@ -350,6 +349,15 @@ fi=📄:\
 *.ppt=🌠:\
 *.pptx=🌠:\
 "
+
+function yz() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 eval "$(starship init zsh)"
 eval "$(tmuxifier init -)"
