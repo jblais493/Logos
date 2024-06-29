@@ -155,6 +155,8 @@ alias blog="tmuxp load ~/Development/Blog2024/blogsession.yaml"
 alias library="cd /mnt/Logos/TrueNAS/Library"
 
 # Scripts
+alias eopn="~/.config/scripts/manage_encrypted_drives eopn"
+alias ecls="~/.config/scripts/manage_encrypted_drives ecls"
 alias rs="gammastep -O 1965K &"
 alias rsx="killall gammastep"
 alias pg="pass generate"
