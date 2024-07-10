@@ -130,8 +130,9 @@ alias p="sudo pacman"
 alias ytd='yt-dlp'
 alias src="source ~/.zshrc"
 alias ezsh="nvim ~/.zshrc"
-alias dcu="docker compose up -d"
 alias dcd="docker compose down"
+alias dcu="docker compose up -d"
+alias dcb="docker compose build"
 alias dc="docker compose"
 
 # Navigation
