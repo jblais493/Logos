@@ -132,6 +132,7 @@ alias src="source ~/.zshrc"
 alias ezsh="nvim ~/.zshrc"
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
+alias dc="docker compose"
 
 # Navigation
 alias oo="cd ~/Vaults"
