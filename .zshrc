@@ -130,10 +130,6 @@ alias p="sudo pacman"
 alias ytd='yt-dlp'
 alias src="source ~/.zshrc"
 alias ezsh="nvim ~/.zshrc"
-alias dcd="docker compose down"
-alias dcu="docker compose up -d"
-alias dcb="docker compose build"
-alias dc="docker compose"
 
 # Navigation
 alias oo="cd ~/Vaults"
@@ -222,6 +218,15 @@ alias qutebrowser="cd ~/.config/qutebrowser"
 alias shell="cd ~/.config/shell"
 alias scripts="cd ~/.config/scripts"
 alias books="cd ~/.config/scripts/bookmarks"
+
+# Development
+alias dcd="docker compose down"
+alias dcu="docker compose up -d"
+alias dcb="docker compose build"
+alias dc="docker compose"
+alias tr="go-task run"
+alias tb="go-task templ"
+alias ttw="go-task tailwindcss"
 
 bindkey -v
 bindkey -M viins 'kj' vi-cmd-mode
