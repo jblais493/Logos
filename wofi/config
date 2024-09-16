@@ -1,0 +1,4 @@
+allow_images=true
+width=40%
+lines=10
+prompt=Search

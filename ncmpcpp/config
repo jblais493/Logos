@@ -1,0 +1,63 @@
+# MPD-settings
+mpd_host =                              "localhost"
+mpd_port =                              "6600"
+mpd_music_dir =                         "~/Music/"
+
+# Player
+autocenter_mode =                       "yes"
+centered_cursor =                       "yes"
+header_visibility =                     "no"
+statusbar_visibility =                  "yes"
+titles_visibility =                     "yes"
+playlist_disable_highlight_delay =      "0"
+state_line_color =                      "magenta"
+
+# Progressbar
+progressbar_color =                     "black"
+progressbar_elapsed_color =             "red"
+progressbar_look =                      "━━"
+
+# Visualizer
+visualizer_type =                       "spectrum"
+visualizer_color =                      "green, cyan, magenta, white"
+visualizer_in_stereo =                  "yes"
+visualizer_output_name =                "My Pulse Output"
+
+# General colors
+set background_color = "#2E3440"
+set color1 = "#D8DEE9"
+set color2 = "#A3BE8C"
+set color3 = "#EBCB8B"
+set color4 = "#81A1C1"
+set color5 = "#B48EAD"
+set color6 = "#88C0D0"
+set color7 = "#E5E9F0"
+set color8 = "#3B4252"
+set color9 = "#BF616A"
+set color10 = "#A3BE8C"
+set color11 = "#EBCB8B"
+set color12 = "#81A1C1"
+set color13 = "#B48EAD"
+set color14 = "#88C0D0"
+set color15 = "#E5E9F0"
+
+# Interface elements
+set statusbar_color = "$color1"
+set volume_color = "$color4"
+set progressbar_color = "$color2"
+set info_color = "$color1"
+set playlist_color = "$color7"
+set browser_color = "$color7"
+set main_color = "$color7"
+set error_color = "$color9"
+set warning_color = "$color3"
+set inputbox_color = "$color7"
+set playlist_focus_color = "$color4"
+set statusbar_bg = "#2E3440"
+set color_selected = "#4C566A"
+set color_playing = "$color4"
+set color_time = "$color2"
+set color_title = "$color1"
+set color_artist = "$color5"
+set color_album = "$color3"
+
