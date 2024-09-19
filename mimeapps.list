@@ -1,0 +1,18 @@
+[Added Associations]
+text/markdown=nvim.desktop;emacs.desktop;org.mozilla.firefox.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+image/jpeg=gimp.desktop;org.gnome.Loupe.desktop;
+image/png=org.gnome.Loupe.desktop;gimp.desktop;
+image/x-sony-arw=org.gnome.Loupe.desktop;
+text/plain=nvim.desktop;org.pwmt.zathura.desktop;
+application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;com.github.johnfactotum.Foliate.desktop;org.gnome.Nautilus.desktop;
+application/x-zerosize=org.gnome.Loupe.desktop;org.pwmt.zathura.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
+video/mp4=mpv.desktop;org.shotcut.Shotcut.desktop;
+application/vnd.amazon.mobi8-ebook=org.pwmt.zathura.desktop;
+image/gif=mpv.desktop;
+text/calendar=nvim.desktop;
+
+[Default Applications]
+image/gif=mpv.desktop
+text/plain=nvim.desktop
+text/markdown=nvim.desktop
