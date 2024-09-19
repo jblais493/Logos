@@ -1,0 +1,17 @@
+return {
+  { import = "plugins.conform" },
+  { import = "plugins.zen-mode" },
+  { import = "plugins.indent-blankline" },
+  { import = "plugins.luarocks" },
+  { import = "plugins.vim-beancount" },
+  { import = "plugins.orgmode" },
+  { import = "plugins.dadbod" },
+  { import = "plugins.hop" },
+  { import = "plugins.obsidian" },
+  { import = "plugins.mason" },
+  { import = "plugins.harpoon" },
+  { import = "plugins.nvim-notify" },
+  { import = "plugins.luasnip" },
+  { import = "plugins.noice" },
+  { import = "plugins.markdown-preview" },
+}

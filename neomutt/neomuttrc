@@ -1,0 +1,197 @@
+# Personal Information
+set realname = ""
+set from = ""
+
+
+# IMAP Settings
+set imap_user = ""
+set imap_pass = `gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/.neomutt/password.gpg`
+set folder = ""
+set spoolfile = "+INBOX"
+set postponed = "+INBOX.Drafts"
+set record = "+INBOX.Sent"
+set trash = "+INBOX.Trash"
+
+# SMTP Settings
+set smtp_url = ""
+set smtp_pass = `gpg --quiet --for-your-eyes-only --no-tty --decrypt ~/.neomutt/password.gpg`
+
+# Basic Options
+set imap_check_subscribed
+set mail_check = 20
+set timeout = 10
+set imap_keepalive = 300
+set imap_idle
+unset imap_passive
+set sort = reverse-date-received
+set move = no
+set ssl_starttls = yes
+set ssl_force_tls = yes
+set quit
+set envelope_from                    # which from?
+set edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set askcc                            # ask for CC:
+set fcc_attach                       # save attachments with the body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set forward_quote                    # include message in forwards
+set mime_forward                     # forward attachments as part of body
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set text_flowed=yes                  # correct indentation for plain text
+unset sig_dashes                     # no dashes before sig
+
+# Performance improvements
+set imap_fetch_chunk_size = 100
+set imap_qresync
+set header_cache = ~/.neomutt/cache/headers
+set certificate_file = ~/.neomutt/certificates
+
+# Sidebar configuration
+set sidebar_visible = yes
+set sidebar_width = 30
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set mail_check_stats
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
+
+# Improve the appearance of the index
+set index_format="%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
+
+# Mailboxes
+mailboxes "=INBOX" "=INBOX.Sent" "=INBOX.Drafts" "=INBOX.Junk" "=INBOX.Trash"
+
+# Pager view in split window
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop
+set menu_scroll
+set tilde
+
+# Faster loading
+set sleep_time = 0
+
+# Start with newest mail at the bottom and cursor on the last email
+set sort = reverse-date-received
+push <last-entry>
+
+# Key bindings for Thunderbird-like navigation
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager B sidebar-toggle-visible
+bind index g noop
+bind index gg first-entry
+bind index G last-entry
+bind pager g noop
+bind pager gg top
+bind pager G bottom
+bind index,pager \Cf half-down
+bind index,pager \Cb half-up
+
+# Quickly change to other mailboxes
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager gs "<change-folder>=Sent<enter>" "Go to sent"
+macro index,pager gd "<change-folder>=Drafts<enter>" "Go to drafts"
+macro index,pager gt "<change-folder>=Trash<enter>" "Go to trash"
+
+# Thread management
+set uncollapse_jump
+set sort_re
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set charset = "utf-8"
+set sort_re
+set sort = date-received
+
+# Viewing HTML emails
+set mailcap_path = ~/.neomutt/.mailcap
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+# Mark messages as read when opening them
+set mark_old = no
+set query_command = "abook --mutt-query '%s'"
+bind editor <Tab> complete-query
+macro index,pager A "<pipe-message>abook --add-email-quiet<return>" "add the sender address to abook"
+
+# Remove debug settings in production
+# set debug_level = 5
+# set debug_file = "~/.neomutt_debug.log"
+# Colors (Nord-inspired theme using traditional color names)
+# Basic colors
+color normal white default
+color error red default
+color tilde blue default
+color message green default
+color markers yellow default
+color attachment magenta default
+color search blue default
+color status brightblack black
+color hdrdefault brightgreen default  # Changed to brightgreen
+color quoted cyan default
+color quoted1 green default
+color quoted2 magenta default
+color quoted3 yellow default
+color quoted4 red default
+color signature blue default
+
+# Index colors
+color index white default '.*'
+color index_author brightgreen default '.*'  # Changed to brightgreen
+color index_number white default
+color index_subject white default '.*'
+color index_size white default
+color index red default "~N" # New messages in softer Nord red
+color index yellow default "~F" # Flagged messages in Nord yellow
+
+# Sidebar colors
+color sidebar_highlight black blue
+color sidebar_divider brightblack default
+color sidebar_flagged yellow default
+color sidebar_new green default
+color sidebar_ordinary white default
+
+# Header colors
+color header brightgreen default "^(From|Subject|Date|To|Cc|Bcc):"  # Changed to brightgreen
+
+# Body colors
+color body white default "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # Email addresses
+color body cyan default "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+" # URLs
+color body green default "\`[^\`]*\`" # Green text in backticks
+color body green default "^# \.*" # Headings
+color body green default "^## \.*" # Subheadings
+color body white default "^###+ \.*" # Lower-level headings
+color body green default "[;:][-o][)/(|]" # emoticons
+color body green default "[;:][)(|]" # emoticons
+color body green default "[ ][*][^*]*[*][ ]?" # more emoticon?
+color body green default "[ ]?[*][^*]*[*][ ]" # more emoticon?
+
+# URL highlighting
+color body cyan default "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
+
+# Colorize inline diffs
+color body green default "^diff \-.*"
+color body green default "^index [a-f0-9].*"
+color body green default "^\-\-\- .*"
+color body green default "^[\+]{3} .*"
+color body red default "^[\-]{1}.*"
+color body green default "^[\+]{1}.*"
+color body magenta default "^@@ .*"
+
+# GPG
+color body green default "^gpg: Good signature from"
+color body yellow default "^gpg: BAD signature from"
+color body yellow default "^gpg: Can't check signature:"
+color body yellow default "^gpg: WARNING:"
+
+# Status bar
+color status yellow black
+color indicator black blue # Selected email highlight
+
+# New message colors
+color index bold red default "~N" # New messages are bold and softer Nord red
+color index_author bold cyan default "~N" # New message authors are bold blue
+color index_subject bold white default "~N" # New message subjects are bold white

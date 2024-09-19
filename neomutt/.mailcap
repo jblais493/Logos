@@ -1,0 +1,2 @@
+text/html; lynx -dump -width=78 -nolist %s; nametemplate=%s.html; copiousoutput
+application/pdf; /usr/bin/zathura %s; print=/usr/bin/acroread %s
