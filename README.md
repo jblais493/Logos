@@ -1,5 +1,7 @@
 # Logos Computing System
 
+![Logos](http://res.cloudinary.com/dmpuhppsb/image/upload/v1726758715/aggpcsonhxrzutfxovsc.png) 
+
 These are the configuration files for the Zen Computing Environment
 
 ## Install all programs:
