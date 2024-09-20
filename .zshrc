@@ -73,6 +73,20 @@ fe() {
   nvim "$(find -type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
 }
 
+frg() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
+
 pe() {
   local file
   file=$(find ~/.password-store -type f -name '*.gpg' | sed "s|^$HOME/.password-store/||;s|\.gpg$||" | fzf)
@@ -153,7 +167,7 @@ alias p="sudo pacman"
 alias ytd='yt-dlp'
 alias src="source ~/.zshrc"
 alias ezsh="nvim ~/.zshrc"
-alias ssh="ssh_fzf"
+alias sshl="ssh_fzf"
 
 # Navigation
 alias oo="cd ~/Vaults"
@@ -165,6 +179,7 @@ alias htmx="tmuxp load ~/go/src/github.com/jblais493/HTMXFrontend/configs/htmxse
 alias hometrova="tmuxp load ~/go/src/github.com/jblais493/Hometrovarevamp/configs/hometrova.yaml"
 alias login="tmuxp load ~/go/src/github.com/jblais493/go-login/gologin.yaml"
 alias writing="tmuxp load ~/Vaults/Writing/writing.yaml"
+alias ttitan="tmuxp load ~/Development/tasktitan/tasktitan.yaml"
 alias dev="cd ~/Development"
 alias photos="cd /mnt/nomad/TrueNAS/Photos"
 alias f="thunar . &"
@@ -172,7 +187,7 @@ alias revere="cd /mnt/nomad/TrueNAS/Revere"
 alias revereb="cd /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Brokerage"
 alias commer="cd /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2024Commercial"
 alias sellers="cd /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2024/Sellers"
-alias buyers="cd /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2024/Buyers"
+alias buyers="cd ~/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Deals/2024/Buyers"
 alias revsys="cd /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Systems"
 alias nas="cd /mnt/nomad/TrueNAS"
 alias media="cd /mnt/nomad/TrueNAS/media"
@@ -184,13 +199,15 @@ alias mpray="nvim ~/Vaults/Personal/Prayers/Morning\ Prayers.md"
 alias epray="nvim ~/Vaults/Personal/Prayers/Evening\ Prayers.md"
 
 # Scripts
+alias dlp="nvim ~/.config/scripts/dlphone"
 alias eopn="~/.config/scripts/manage_encrypted_drives eopn"
 alias ecls="~/.config/scripts/manage_encrypted_drives ecls"
-alias rs="gammastep -O 1965K &"
+alias rs="~/.config/scripts/gammastep.sh"
 alias rsx="killall gammastep"
 alias pg="pass generate"
 alias v="nvim"
 alias sd="spotdl"
+alias nm="neomutt"
 alias syncvault="rsync -avz --delete /mnt/TrueNAS/ /mnt/Vault/TrueNAS"
 alias syncnas="rsync -avz --delete /mnt/nomad/TrueNAS/ /mnt/External4TB/TrueNAS"
 alias mntnas="sshfs joshua@172.18.250.13:/mnt/Vault /mnt/Logos"
@@ -199,8 +216,8 @@ alias mntexternal="sudo mount /dev/sdb1 /mnt/External4TB"
 alias mntvault="sudo mount /dev/sda /mnt/Logos"
 alias doomsync="~/.emacs.d/bin/doom sync"
 alias doomrefresh="~/.emacs.d/bin/doom refresh"
-alias reverecalc="cd /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Systems/Programs/Calculators && python ConveyancingOutput.py"
-alias buyercalc="cd /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Systems/Programs/Calculators && python BuyerCommissionCalc.py"
+alias reverecalc="cd ~/Revere/Revere\ LATEST/Systems/Programs/Calculators && python ConveyancingOutput.py"
+alias buyercalc="cd ~/Revere/Revere\ LATEST/Systems/Programs/Calculators && python BuyerCommissionCalc.py"
 alias record="arecord -f cd output.wav"
 alias anime="~/.config/scripts/ani-cli/ani-cli"
 alias brodirs="mkdir 'Brokerage Documents' 'Offer' 'Conveyancing' 'Payout' 'Posts'"
@@ -223,9 +240,12 @@ alias stopvpn="sudo systemctl stop wg-quick@wg0"
 # Payouts
 alias letterhead="cd /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Logos\ and\ Assets/Letterhead/2022/"
 alias eftinfo="gimp /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Logos\ and\ Assets/Letterhead/2022/Paid\ by\ EFT.xcf"
-alias invoice="gimp /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Logos\ and\ Assets/Letterhead/2022/Commission\ Invoice\ Template.xcf"
+alias invoice="gimp ~/Revere/Revere\ LATEST/Logos\ and\ Assets/Letterhead/2022/Commission\ Invoice\ Template.xcf"
 alias cashback="gimp ~/Revere/Revere\ LATEST/Logos\ and\ Assets/Letterhead/2022/Cashback\ Template.xcf"
 alias payout="gimp /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Systems/Templates/Invoicing\ Templates/Paystub\ Template.xcf"
+alias payoutBobby="gimp /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Agents/Paystubs/Paystub\ -\ Bobby\ Kriangkum.xcf"
+alias payoutCody="gimp /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Agents/Paystubs/Paystub\ -\ Cody\ Serediak.xcf"
+alias payoutSeth="gimp ~/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Agents/Paystubs/Paystub\ -\ Seth\ Macdonald.xcf"
 alias cinst="gimp ~/Revere/Revere\ LATEST/Systems/Conveyancing/Templates/Conveyancing\ Instructions\ Template.xcf"
 
 # Tmux commands
@@ -261,6 +281,7 @@ alias gdoc="stdsym | fzf --preview 'go doc {}' | xargs go doc"
 # Task Management
 alias tt="~/.config/scripts/rank_tasks.sh"
 alias ta="~/.config/scripts/add_task.sh"
+alias te="~/.config/scripts/edit_task.sh"
 alias tc="~/.config/scripts/add_contact.sh"
 alias tws="timew summary"
 alias kcal="khal interactive"
