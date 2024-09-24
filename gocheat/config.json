@@ -112,6 +112,46 @@
       "tag": "tmux",
       "title": "tmux prefix : ctrl + space"
     },
+  {
+    "tag": "tmux",
+    "title": "reload config file : prefix + r"
+  },
+  {
+    "tag": "tmux",
+    "title": "select pane : ctrl + ←/→/↑/↓"
+  },
+  {
+    "tag": "tmux",
+    "title": "enter copy mode : prefix + v"
+  },
+  {
+    "tag": "tmux",
+    "title": "begin selection in copy mode : v"
+  },
+  {
+    "tag": "tmux",
+    "title": "copy selection in copy mode : y"
+  },
+  {
+    "tag": "tmux",
+    "title": "resize pane (fine) : shift + ←/→/↑/↓"
+  },
+  {
+    "tag": "tmux",
+    "title": "split window vertically : prefix + -"
+  },
+  {
+    "tag": "tmux",
+    "title": "split window horizontally : prefix + \\"
+  },
+  {
+    "tag": "tmux",
+    "title": "new window : prefix + c"
+  },
+  {
+    "tag": "tmux",
+    "title": "break pane into new window : prefix + b"
+  },
     {
       "tag": "tmux",
       "title": "swap panes : prefix + {/}"
