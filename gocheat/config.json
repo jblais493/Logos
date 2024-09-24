@@ -1,48 +1,176 @@
 {
   "items": [
     {
-      "tag": "windows",
-      "title": "toggle tiled/floating view : alt+t"
+      "tag": "hyprland",
+      "title": "toggle tiled/floating view : alt + t"
     },
     {
-      "tag": "windows",
-      "title": "cycle windows : alt+←/→/↑/↓"
+      "tag": "hyprland",
+      "title": "focus window : alt + ←/→/↑/↓"
     },
     {
-      "tag": "windows",
-      "title": "resize windows : alt+ctrl+←/→/↑/↓"
+      "tag": "hyprland",
+      "title": "resize windows : alt + ctrl + ←/→/↑/↓"
     },
     {
-      "tag": "windows",
-      "title": "move windows : alt+shift+←/→/↑/↓"
+      "tag": "hyprland",
+      "title": "move windows : alt + shift + ←/→/↑/↓"
     },
     {
-      "tag": "nvim",
-      "title": "nvim tree : ctrl+n"
+      "tag": "hyprland",
+      "title": "toggle split vertical/horizontal : alt + j"
     },
     {
-      "tag": "tmux",
-      "title": "prefix : ctrl+space"
+      "tag": "hyprland",
+      "title": "go to workspace (1-9) : alt + 1-9"
     },
     {
-      "tag": "tmux",
-      "title": "swap panes : prefix+{ or }"
+      "tag": "hyprland",
+      "title": "move window to workspace (1-9) : alt + shift + 1-9"
     },
     {
-      "tag": "tmux",
-      "title": "save session : prefix+ctrl+s"
+      "tag": "hyprland",
+      "title": "lock screen (hyprlock) : alt + ctrl + l"
     },
     {
-      "tag": "tmux",
-      "title": "switch to session : prefix+w"
+      "tag": "hyprland",
+      "title": "close window : alt + q"
     },
     {
-      "tag": "tmux",
+      "tag": "hyprland",
+      "title": "toggle pseudotiled : alt + o"
+    },
+    {
+      "tag": "hyprland",
+      "title": "special/secret workspace : alt + s"
+    },
+    {
+      "tag": "hyprland",
+      "title": "kill hyprland : alt + shift + 0"
+    },
+    {
+      "tag": "hyprland",
+      "title": "cycle windows : alt + tab"
+    },
+    {
+      "tag": "hyprland",
+      "title": "toggle fullscreen : alt + shift + f"
+    },
+    {
+      "tag": "programs",
+      "title": "firefox : alt + w"
+    },
+    {
+      "tag": "programs",
+      "title": "screenshot (grimshot) : printscrn"
+    },
+    {
+      "tag": "programs",
+      "title": "kitty terminal : alt + enter"
+    },
+    {
+      "tag": "programs",
+      "title": "wofi finder : alt + space"
+    },
+    {
+      "tag": "programs",
+      "title": "password manager (tessen) : alt + p"
+    },
+    {
+      "tag": "programs",
+      "title": "bemoji (emoji picker) : alt + y"
+    },
+    {
+      "tag": "programs",
+      "title": "thunderbird : alt + m"
+    },
+    {
+      "tag": "programs",
+      "title": "yazi (file manager) : alt + f"
+    },
+    {
+      "tag": "programs",
+      "title": "newsboat : alt + z"
+    },
+    {
+      "tag": "programs",
+      "title": "hyprpicker (color picker) : alt + shift + c"
+    },
+    {
+      "tag": "hyprland",
       "title": " : "
     },
     {
+      "tag": "nvim",
+      "title": "nvim tree : ctrl + n"
+    },
+    {
+      "tag": "nvim",
+      "title": "open floating terminal : alt + l"
+    },
+    {
       "tag": "tmux",
-      "title": "navigate panes : ctrl+←/→/↑/↓"
+      "title": "tmux prefix : ctrl + space"
+    },
+    {
+      "tag": "tmux",
+      "title": "swap panes : prefix + {/}"
+    },
+    {
+      "tag": "tmux",
+      "title": "save session : prefix + ctrl + s"
+    },
+    {
+      "tag": "tmux",
+      "title": "navigate panes : ctrl + ←/→/↑/↓"
+    },
+    {
+      "tag": "tmux",
+      "title": "switch to session : prefix + w"
+    },
+    {
+      "tag": "tmux",
+      "title": "rename session : prefix + ':rename'"
+    },
+    {
+      "tag": "scripts",
+      "title": "start/stop recording screen : alt + ctrl + v"
+    },
+    {
+      "tag": "scripts",
+      "title": "camera on screen : alt + ctrl + s"
+    },
+    {
+      "tag": "scripts",
+      "title": "mount encrypted drive : alt + ctrl + o"
+    },
+    {
+      "tag": "scripts",
+      "title": "unmount encrypted drive : alt + ctrl + c"
+    },
+    {
+      "tag": "scripts",
+      "title": "change wallpaper : alt + ctrl + w"
+    },
+    {
+      "tag": "scripts",
+      "title": "open today.md file : alt + n"
+    },
+    {
+      "tag": "scripts",
+      "title": "open bookmarks file : alt + b"
+    },
+    {
+      "tag": "scripts",
+      "title": "open ncmpcpp music : alt + ctrl + m"
+    },
+    {
+      "tag": "media",
+      "title": "brightness : XF86MonBrightnessDown/Up"
+    },
+    {
+      "tag": "media",
+      "title": "volume up/down : ctrl + shift + ↑/↓"
     }
   ],
   "styles": {
