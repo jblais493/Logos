@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "tag": "windows",
+      "title": "toggle tiled/floating view : alt+t"
+    },
+    {
+      "tag": "windows",
+      "title": "cycle windows : alt+←/→/↑/↓"
+    },
+    {
+      "tag": "windows",
+      "title": "resize windows : alt+ctrl+←/→/↑/↓"
+    },
+    {
+      "tag": "windows",
+      "title": "move windows : alt+shift+←/→/↑/↓"
+    },
+    {
+      "tag": "nvim",
+      "title": "nvim tree : ctrl+n"
+    },
+    {
+      "tag": "tmux",
+      "title": "prefix : ctrl+space"
+    },
+    {
+      "tag": "tmux",
+      "title": "swap panes : prefix+{ or }"
+    },
+    {
+      "tag": "tmux",
+      "title": "save session : prefix+ctrl+s"
+    },
+    {
+      "tag": "tmux",
+      "title": "switch to session : prefix+w"
+    },
+    {
+      "tag": "tmux",
+      "title": " : "
+    },
+    {
+      "tag": "tmux",
+      "title": "navigate panes : ctrl+←/→/↑/↓"
+    }
+  ],
+  "styles": {
+    "accent": "#b4befe",
+    "subtext": "#6c7086"
+  }
+}
