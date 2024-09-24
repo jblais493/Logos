@@ -166,7 +166,6 @@ alias dnf="sudo dnf"
 alias p="sudo pacman"
 alias ytd='yt-dlp'
 alias src="source ~/.zshrc"
-alias ezsh="nvim ~/.zshrc"
 alias sshl="ssh_fzf"
 
 # Navigation
@@ -210,6 +209,7 @@ alias sd="spotdl"
 alias nm="neomutt"
 alias syncvault="rsync -avz --delete /mnt/TrueNAS/ /mnt/Vault/TrueNAS"
 alias syncnas="rsync -avz --delete /mnt/nomad/TrueNAS/ /mnt/External4TB/TrueNAS"
+alias syncrev="rsync -avz --delete '/home/joshua/Revere/Revere LATEST/' '/mnt/nomad/TrueNAS/Revere/Revere LATEST/'"
 alias mntnas="sshfs joshua@172.18.250.13:/mnt/Vault /mnt/Logos"
 alias umountnas="fusermount -u /mnt/Logos"
 alias mntexternal="sudo mount /dev/sdb1 /mnt/External4TB"
@@ -256,6 +256,7 @@ alias tsf="tmux source-file ~/.tmux.conf"
 alias tk="tmux kill-session -a"
 
 # config files
+alias ezsh="nvim ~/.zshrc"
 alias envim="cd ~/.config/nvim && nvim"
 alias ehyp="cd ~/.config/hypr && nvim"
 alias qutebrowser="cd ~/.config/qutebrowser"
@@ -280,6 +281,7 @@ alias ttw="go-task tailwindcss"
 alias gdoc="stdsym | fzf --preview 'go doc {}' | xargs go doc"
 
 # Task Management
+alias ff="fastfetch"
 alias tt="~/.config/scripts/rank_tasks.sh"
 alias ta="~/.config/scripts/add_task.sh"
 alias te="~/.config/scripts/edit_task.sh"
