@@ -57,3 +57,7 @@ and move all configuration folders to $XDG/.config.
 ### Image editing: [GIMP](https://www.gimp.org/) 
 ### Video editing: [Shotcut](https://www.shotcut.org/) 
 ### Torrent Client: [qbittorrent](https://www.qbittorrent.org/) 
+
+## Controls
+
+Install [GoCheat](https://github.com/Achno/gocheat) and save my /gocheat/config.json to your ~/.config/gocheat directory 
