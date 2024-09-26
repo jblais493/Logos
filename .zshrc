@@ -198,6 +198,8 @@ alias mpray="nvim ~/Vaults/Personal/Prayers/Morning\ Prayers.md"
 alias epray="nvim ~/Vaults/Personal/Prayers/Evening\ Prayers.md"
 
 # Scripts
+alias f2p="~/.config/scripts/file_2_phone.sh"
+alias twi="py ~/.config/scripts/tweet_cli.py"
 alias dlp="nvim ~/.config/scripts/dlphone"
 alias eopn="~/.config/scripts/manage_encrypted_drives eopn"
 alias ecls="~/.config/scripts/manage_encrypted_drives ecls"
