@@ -198,6 +198,7 @@ alias mpray="nvim ~/Vaults/Personal/Prayers/Morning\ Prayers.md"
 alias epray="nvim ~/Vaults/Personal/Prayers/Evening\ Prayers.md"
 
 # Scripts
+alias w2pdf="wkhtmltopdf"
 alias f2p="~/.config/scripts/file_2_phone.sh"
 alias twi="py ~/.config/scripts/tweet_cli.py"
 alias dlp="nvim ~/.config/scripts/dlphone"
