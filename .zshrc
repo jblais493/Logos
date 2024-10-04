@@ -289,8 +289,6 @@ alias tt="~/.config/scripts/rank_tasks.sh"
 alias ta="~/.config/scripts/add_task.sh"
 alias te="~/.config/scripts/edit_task.sh"
 alias tc="~/.config/scripts/add_contact.sh"
-alias tws="timew summary"
-alias kcal="khal interactive"
 
 bindkey -v
 bindkey -M viins 'kj' vi-cmd-mode
