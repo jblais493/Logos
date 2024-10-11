@@ -7,12 +7,12 @@
 @define-color cc-bg alpha(@noti-bg, 0.9);
 
 @define-color noti-border-color @noti-bg;
-@define-color noti-bg-hover #8fbcbb;
+@define-color noti-bg-hover #81A1C1;
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
 
 /* @define-color bg-selected rgb(137,180,250); */
-@define-color bg-selected #88c0d0;
+@define-color bg-selected #81A1C1;
 
 
 /* Window behind control center and on all other monitors */
@@ -25,7 +25,7 @@
 .control-center {
   background: @cc-bg;
   border-radius: 8px;
-  border: 0px solid #88c0d0;
+  border: 0px solid #2E3440;
 }
 
 .control-center-list {
@@ -73,8 +73,8 @@
 }
 
 .control-center .notification-content {
-  border: none;
-  background: transparent;
+  border: 1px solid #81A1C1;
+  background: #2E3440;
 }
 
 .close-button {
