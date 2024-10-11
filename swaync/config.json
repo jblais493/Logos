@@ -1,0 +1,138 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 10,
+  "control-center-margin-left": 0,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 200,
+  "notification-body-image-width": 200,
+  "timeout": 3,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "control-center-width": 400,
+  "control-center-height": 600,
+  "notification-window-width": 300,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "scripts": {
+    "example-script": {
+      "exec": "echo 'Do something...'",
+      "urgency": "Normal"
+    }
+  },
+  "notification-visibility": {
+    "example-name": {
+      "state": "muted",
+      "urgency": "Low",
+      "app-name": "Spotify"
+    }
+  },
+  "widgets": [
+    "label",
+    "menubar",
+    "buttons-grid",
+    "volume",
+    "backlight",
+    "title",
+    "dnd",
+    "mpris",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "backlight": {
+      "label": "🔅",
+      "device": "intel_backlight",
+      "min": 10
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 1,
+      "text": "Control Center"
+    },
+    "mpris": {
+      "image-size": 96,
+      "image-radius": 12
+    },
+    "volume": {
+      "label": "󰕾"
+    },
+    "menubar": {
+      "menu#power-buttons": {
+        "label": "🛑",
+        "position": "right",
+        "actions": [
+          {
+            "label": "🔐   Lock",
+            "command": "wlogout"
+          },
+          {
+            "label": "🕸   Logout",
+            "command": "loginctl terminate-session ${XDG_SESSION_ID-}"
+          },
+          {
+            "label": "🔄   Reboot",
+            "command": "systemctl reboot"
+          },
+          {
+            "label": "💣   Shut down",
+            "command": "systemctl poweroff"
+          }
+        ]
+      },
+      "menu#screenshot-buttons": {
+        "label": "󰄀",
+        "position": "left",
+        "actions": [
+          {
+            "label": "󰄁   All Screens",
+            "command": "grimblast save screen"
+          },
+          {
+            "label": "󰄁   Current Active Screen",
+            "command": "grimblast save output"
+          },
+          {
+            "label": "󰄁   Current Active Window",
+            "command": "grimblast save active"
+          },
+          {
+            "label": "󰄁   Select a region",
+            "command": "grimblast save area"
+          }
+        ]
+      },
+      "menu#screencast-buttons": {
+        "label": "󰕧",
+        "position": "left",
+        "actions": [
+          {
+            "label": "󰕧   Start OBS-STUDIO",
+            "command": "obs"
+          }
+        ]
+      }
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󱡫",
+          "command": "pavucontrol"
+        }
+      ]
+    }
+  }
+}
