@@ -24,8 +24,8 @@
 /* Main panel */
 .control-center {
   background: @cc-bg;
-  border-radius: 16px;
-  border: 2px solid #88c0d0;
+  border-radius: 8px;
+  border: 0px solid #88c0d0;
 }
 
 .control-center-list {
@@ -41,7 +41,7 @@
 .notification-row {
   /* outline: 2px solid blue; */
   background: transparent;
-  border-radius: 16px;
+  border-radius: 8px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -68,7 +68,7 @@
   margin: 0px;
   padding: 10px;
   border-radius: 8px;
-  border: 2px solid #88c0d0;
+  border: 0px solid #88c0d0;
   background: @cc-bg;
 }
 
@@ -120,12 +120,12 @@
 }
 
 .image {
-  border-radius: 100%;
+  border-radius: 8%;
 }
 
 .body-image {
   background-color: white;
-  border-radius: 100%;
+  border-radius: 8%;
 }
 
 .summary {

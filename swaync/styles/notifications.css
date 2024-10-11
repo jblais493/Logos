@@ -24,14 +24,14 @@
 }
 
 .low {
-    border: 1px solid @color3;
+    border: 0px solid @color3;
 }
 .normal {
-    border: 1px solid #88c0d0;
+    border: 0px solid #88c0d0;
 } /* or color5 */
 .critical {
     background: alpha(black, 0.89);
-    border: 1px solid white;
+    border: 0px solid white;
     color: #eeeeee;
 }
 
@@ -67,7 +67,7 @@
 .body-image {
     margin-top: 6px;
     background-color: white;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .summary {

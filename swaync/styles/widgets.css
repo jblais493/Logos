@@ -34,7 +34,7 @@
     background: @background;
     border: 1px solid @color6;
     box-shadow: none;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 .widget-inhibitors > button:hover {
     /* background: @noti-bg-hover; */
