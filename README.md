@@ -16,7 +16,7 @@ and move all configuration folders to $XDG/.config.
 # Programs
 ## Environment
 ### Window Manager: [Hyprland](https://hyprland.org/) 
-### Notifications: [Dunst](https://github.com/dunst-project/dunst) 
+### Notifications: [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) 
 ### Launcher: [Wofi](https://hg.sr.ht/~scoopta/wofi) 
 ### Bar: [Waybar](https://github.com/Alexays/Waybar) 
 ### Screen lock: [hypridle](https://github.com/hyprwm/hypridle) and [hyprlock](https://github.com/hyprwm/hyprlock)
@@ -61,3 +61,7 @@ and move all configuration folders to $XDG/.config.
 ## Controls
 
 Install [GoCheat](https://github.com/Achno/gocheat) and save my /gocheat/config.json to your ~/.config/gocheat directory 
+
+## Changelog:
+
+**October 10, 2024: Swapped in SwayNC instead of dunst for notificatons**
