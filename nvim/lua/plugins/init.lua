@@ -14,4 +14,5 @@ return {
   { import = "plugins.luasnip" },
   { import = "plugins.noice" },
   { import = "plugins.markdown-preview" },
+  { import = "plugins.telescope" },
 }
