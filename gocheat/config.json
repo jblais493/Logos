@@ -109,6 +109,18 @@
       "title": "open floating terminal : alt + l"
     },
     {
+      "tag": "nvim",
+      "title": "harpoon add : leader + a"
+    },
+    {
+      "tag": "nvim",
+      "title": "harpoon telescope : leader + h"
+    },
+    {
+      "tag": "nvim",
+      "title": "harpoon remove mark : leader + hd"
+    },
+    {
       "tag": "tmux",
       "title": "tmux prefix : ctrl + space"
     },
@@ -214,7 +226,7 @@
     }
   ],
   "styles": {
-    "accent": "#b4befe",
+    "accent": "#81A1C1",
     "subtext": "#6c7086"
   }
 }
