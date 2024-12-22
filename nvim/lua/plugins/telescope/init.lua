@@ -33,8 +33,8 @@ return {
     end, {})
 
     -- Add custom command for Harpoon marks
-    vim.api.nvim_create_user_command('HarpoonMarks', function()
+    vim.keymap.set("n", "<leader>h", function()
       telescope.extensions.harpoon.marks()
-    end, {})
+    end, { desc = "Harpoon marks in Telescope" })
   end
 }
