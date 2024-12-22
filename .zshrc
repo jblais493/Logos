@@ -175,6 +175,7 @@ alias godir="cd ~/go/src/github.com/jblais493/"
 alias blog="tmuxp load ~/Development/Blog2024/blogsession.yaml"
 alias gop="tmuxp load ~/go/src/github.com/jblais493/EchoBoilerplate/echosession.yaml"
 alias htmx="tmuxp load ~/go/src/github.com/jblais493/HTMXFrontend/configs/htmxsession.yaml"
+alias hermes="tmuxp load ~/go/src/github.com/jblais493/Hermes/configs/hermessession.yaml"
 alias hometrova="tmuxp load ~/go/src/github.com/jblais493/Hometrovarevamp/configs/hometrova.yaml"
 alias login="tmuxp load ~/go/src/github.com/jblais493/go-login/gologin.yaml"
 alias writing="tmuxp load ~/Vaults/Writing/writing.yaml"
@@ -245,10 +246,6 @@ alias letterhead="cd /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Logos\ and\ Assets
 alias eftinfo="gimp /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Logos\ and\ Assets/Letterhead/2022/Paid\ by\ EFT.xcf"
 alias invoice="gimp ~/Revere/Revere\ LATEST/Logos\ and\ Assets/Letterhead/2022/Commission\ Invoice\ Template.xcf"
 alias cashback="gimp ~/Revere/Revere\ LATEST/Logos\ and\ Assets/Letterhead/2022/Cashback\ Template.xcf"
-alias payout="gimp /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Systems/Templates/Invoicing\ Templates/Paystub\ Template.xcf"
-alias payoutBobby="gimp /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Agents/Paystubs/Paystub\ -\ Bobby\ Kriangkum.xcf"
-alias payoutCody="gimp /mnt/nomad/TrueNAS/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Agents/Paystubs/Paystub\ -\ Cody\ Serediak.xcf"
-alias payoutSeth="gimp ~/Revere/Revere\ LATEST/Brokerage/Alberta/Edmonton/Agents/Paystubs/Paystub\ -\ Seth\ Macdonald.xcf"
 alias cinst="gimp ~/Revere/Revere\ LATEST/Systems/Conveyancing/Templates/Conveyancing\ Instructions\ Template.xcf"
 
 # Tmux commands
@@ -274,7 +271,7 @@ alias ci='~/.config/scripts/todotimer ci'
 alias co='~/.config/scripts/todotimer co'
 alias dcd="docker compose down"
 alias dcu="docker compose up -d"
-alias dcb="docker compose build"
+alias dcb='docker build'
 alias dc="docker compose"
 alias tr="go-task run"
 alias tm="go-task migrate"
